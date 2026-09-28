@@ -6,20 +6,21 @@ def test_tax_at_seven_percent():
     tax = subtotal * 0.07
     assert math.isclose(tax, 14.0)
 
-
 def test_over_limit_true():
-    assert (1500 > 1000) is True
+    total = 1500
+    limit = 1000
+    assert (total > limit) is True
 
 
 def test_over_limit_false():
-    assert (500 > 1000) is False
-
+    total = 500
+    limit = 1000
+    assert (total > limit) is False
 
 def test_type_of_string():
-    name = "ISM3232"
+    name = 'ISM3232'
     assert type(name) == str
 
-
 def test_type_conversion():
-    s = "42"
+    s = '42'
     assert int(s) == 42
